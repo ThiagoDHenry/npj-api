@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-import { ClienteSchema } from "src/cliente/schema/cliente.schema";
-import { VaraSchema } from "src/vara/schema/vara.schema";
+import { ClienteSchema } from "src/clientes/schema/clientes.schema";
+import { VaraSchema } from "src/varas/schema/varas.schema";
 
 
 export const JuridicoSchema = new mongoose.Schema({

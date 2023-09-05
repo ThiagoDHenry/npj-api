@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-export const ClienteSchema = new mongoose.Schema({ 
+export const AgendamentoSchema = new mongoose.Schema({ 
     numeroProntuario: Number,
     dataAtendimento: Number,
     status: Boolean,

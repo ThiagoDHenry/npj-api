@@ -8,8 +8,9 @@ import {
     Post,
     Put,
   } from '@nestjs/common';
-import { AgendamentoService } from './shared/agendamento.service';
 import { Agendamento } from './shared/agendamento';
+import { AgendamentoService } from './shared/agendamento.service';
+
 
   
   @Controller('agendamentos')

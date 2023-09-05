@@ -1,19 +1,15 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-
-import { MotivoSchema } from './motivos/schema/motivo.schema';
-import { MongooseModule } from '@nestjs/mongoose';
-import { MotivoController } from './motivos/motivo.controller';
-import { MotivoService } from './motivos/shared/motivo.service';
-
+import { MotivosModule } from './motivos/motivo.module';
+import { VarasModule } from './varas/varas.module';
+import { AgendamentosModule } from './agendamentos/agendamentos.module';
+import { JuridicosModule } from './juridicos/juridicos.module';
+import { ClientesModule } from './clientes/clientes.module';
 
 @Module({
-  imports: [
-    MongooseModule.forRoot('mongodb://localhost:27017:npj'),
-    MongooseModule.forFeature([{ name: 'Motivo', schema: MotivoSchema }]),
-],
-  controllers: [AppController, MotivoController],
-  providers: [AppService, MotivoService],
+  imports: [MotivosModule, VarasModule, AgendamentosModule, JuridicosModule, ClientesModule],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}
