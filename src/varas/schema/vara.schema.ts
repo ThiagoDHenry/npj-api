@@ -1,10 +1,10 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
-export type MotivoDocument = Motivo & Document;
+export type VaraDocument = Vara & Document;
 
 @Schema()
-export class Motivo {
+export class Vara {
   @Prop({ required: true, unique: true })
   descricao: string;
 
@@ -12,4 +12,4 @@ export class Motivo {
   status: boolean;
 }
 
-export const MotivoSchema = SchemaFactory.createForClass(Motivo);
+export const VaraSchema = SchemaFactory.createForClass(Vara);
